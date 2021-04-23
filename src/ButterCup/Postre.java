@@ -13,6 +13,7 @@ public class Postre{
     public Cliente listaCliente;
     public Cocinero listaCocinero;
     Insumo insumosNecesarios;
+    public Sucursal listaPostres;
     ArrayList<Insumo> insumos = new ArrayList<Insumo>();
 
     // METODO CONSTRUCTOR DE LA CLASE POSTRE
@@ -24,35 +25,19 @@ public class Postre{
         this.insumos = new ArrayList<Insumo>();
     }
 
-//    // RECETA PASTEL DE TRES LECHES
-//    public void PastelTresLeches(Insumo productoInsumo, int cantidad){
-//        productoInsumo.listaPostres = this;
-//        this.insumos.add(productoInsumo);
-//
-//        gastoUnitario = cantidad * insumosNecesarios.precioInsumo;
-//        this.gastoUnitario = gastoUnitario;
-//    }
-//
-//    // MOSTRAR LOS INSUMOS DE LA RECETA
-//    public void MostrarRecetaPastelTresLeches(){
-//        int i = 0;
-//        for(Insumo x: insumos){
-//            System.out.println("Insumo: " + x.nombreInsumo + " Gasto total: " + this.gastoUnitario);
-//        }
-//    }
-//
-//    // RECETA PASTEL OREO
-//    public void PastelOreo(Insumo productoInsumo, int cantidad){
-//        productoInsumo.listaPostres = this;
-//        this.insumos.add(productoInsumo);
-//    }
-//
-//    // MOSTRAR LOS INSUMOS DE LA RECETA
-//    public void MostrarPastelOreo(){
-//        int i = 0;
-//        for(Insumo x: insumos){
-//            gastoUnitario = this.cantidad * x.precioInsumo;
-//            System.out.println("Insumo: " + x.nombreInsumo + " Gasto total: " + gastoUnitario);
-//        }
-//    }
+    // ASIGNAR LOS INSUMOS A LA RECETA DEL POSTRE
+    public void AgregarInsumoReceta(Insumo nuevoInsumo){
+        nuevoInsumo.listaPostres = this;
+        this.insumos.add(nuevoInsumo);
+    }
+
+    // METODO PARA MOSTRAR LOS INSUMOS DE LA RECETA
+    public void MostrarInsumosRecetaPostre(){
+        int i = 0;
+        System.out.println("POSTRE \t\t\t\t" + " INSUMOS");
+        for (Insumo p: insumos) {
+            System.out.println(this.nombrePostre + "\t | \t" + p.nombreInsumo);
+            i++;
+        }
+    }
 }

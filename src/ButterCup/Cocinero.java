@@ -28,6 +28,7 @@ public class Cocinero {
 
         for (Postre p: postres) {
             System.out.println("Postre: " + p.nombrePostre);
+            i++;
         }
     }
 }

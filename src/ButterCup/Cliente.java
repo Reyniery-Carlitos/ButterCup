@@ -47,6 +47,7 @@ public class Cliente {
         int i = 0;
         for (Postre p: this.postres){
             System.out.println(p.idPostre + " " + p.nombrePostre + " " + this.cantidad + " " + p.precio);
+            i++;
         }
         System.out.println("Total: " + this.total);
     }

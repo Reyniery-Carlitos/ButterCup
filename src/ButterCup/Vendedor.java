@@ -28,8 +28,10 @@ public class Vendedor {
 
     // MOSTRAR LOS CLIENTES ASIGNADOS A LOS EMPLEADOS
     public void MostrarClientes(){
+        int i = 0;
         for(Cliente c: clientes){
             System.out.println("Clientes: " + c.idCliente + " " + c.nombreCliente);
+            i++;
         }
     }
 }

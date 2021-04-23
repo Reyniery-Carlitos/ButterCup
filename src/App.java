@@ -25,7 +25,6 @@ public class App {
         Cliente c15 = new Cliente("2014", "Reina Diaz");
         Cliente c16 = new Cliente("2015", "Ney Zuniga");
 
-
         // CREANDO LOS VENDEDORES
         Vendedor v1 = new Vendedor("4000", "Maria Hernandez", s1);
         Vendedor v2 = new Vendedor("4001", "Lidia Flores", s2);
@@ -63,6 +62,48 @@ public class App {
         Insumo i7 = new Insumo("9006", "Bananos", "Descripcion insumo 7", 200, 1);
         Insumo i8 = new Insumo("9007", "Harina", "Descripcion insumo 8", 250, 10);
         Insumo i9 = new Insumo("9008", "Galletas Oreo", "Descripcion insumo 9", 150, 5);
+        Insumo i10 = new Insumo("9009", "Crema", "Descripcion Insumo 10", 100, 10);
+
+        // ASIGNAR INSUMOS AL POSTRE
+        p1.AgregarInsumoReceta(i3);
+        p1.AgregarInsumoReceta(i8);
+        p1.AgregarInsumoReceta(i9);
+
+        p2.AgregarInsumoReceta(i2);
+        p2.AgregarInsumoReceta(i3);
+
+        p3.AgregarInsumoReceta(i2);
+        p3.AgregarInsumoReceta(i3);
+        p3.AgregarInsumoReceta(i4);
+
+        p4.AgregarInsumoReceta(i1);
+        p4.AgregarInsumoReceta(i3);
+        p4.AgregarInsumoReceta(i8);
+        p4.AgregarInsumoReceta(i10);
+
+        p5.AgregarInsumoReceta(i2);
+        p5.AgregarInsumoReceta(i3);
+        p5.AgregarInsumoReceta(i8);
+        p5.AgregarInsumoReceta(i10);
+
+        p6.AgregarInsumoReceta(i3);
+        p6.AgregarInsumoReceta(i4);
+
+        p7.AgregarInsumoReceta(i3);
+        p7.AgregarInsumoReceta(i5);
+        p7.AgregarInsumoReceta(i1);
+
+        p8.AgregarInsumoReceta(i1);
+        p8.AgregarInsumoReceta(i2);
+        p8.AgregarInsumoReceta(i3);
+        p8.AgregarInsumoReceta(i6);
+
+        p9.AgregarInsumoReceta(i3);
+        p9.AgregarInsumoReceta(i8);
+
+        p10.AgregarInsumoReceta(i3);
+        p10.AgregarInsumoReceta(i6);
+        p10.AgregarInsumoReceta(i7);
 
         // REALIZANDO PEDIDOS DE LOS CLIENTES
         c1.Pedir(p3, s1, 2, "23", "Diciembre", "2021");
@@ -144,6 +185,18 @@ public class App {
 
         s3.AsignarVendedor(v5);
 
+        // ASIGNAR LOS POSTRES QUE VENDE CADA SUCURSAL
+        s1.AgregarPostre(p1);
+        s1.AgregarPostre(p2);
+        s1.AgregarPostre(p3);
+        s1.AgregarPostre(p4);
+        s1.AgregarPostre(p5);
+        s1.AgregarPostre(p6);
+        s1.AgregarPostre(p7);
+        s1.AgregarPostre(p8);
+        s1.AgregarPostre(p9);
+        s1.AgregarPostre(p10);
+
         // MOSTRAR EL REPORTE DIARIO
         s1.ReporteDiario("23", "Diciembre", "2021");
         s2.ReporteDiario("23", "Diciembre", "2021");
@@ -154,6 +207,19 @@ public class App {
         s2.ReporteMensual("Noviembre", "2021");
         s3.ReporteMensual("Noviembre", "2021");
 
+        // MOSTRAR REPORTE DEL TOTAL DE INSUMOS GASTADOS
+//        s1.MostrarReporteInsumo("23", "Diciembre", "2021", 10);
 
+        // MOSTRAR RECETA
+        p1.MostrarInsumosRecetaPostre();
+        p2.MostrarInsumosRecetaPostre();
+        p3.MostrarInsumosRecetaPostre();
+        p4.MostrarInsumosRecetaPostre();
+        p5.MostrarInsumosRecetaPostre();
+        p6.MostrarInsumosRecetaPostre();
+        p7.MostrarInsumosRecetaPostre();
+        p8.MostrarInsumosRecetaPostre();
+        p9.MostrarInsumosRecetaPostre();
+        p10.MostrarInsumosRecetaPostre();
     }
 }
